@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const imageUrls = [
   '/images/gif1.gif',
@@ -15,13 +16,12 @@ const imageUrls = [
 ];
 
 const colors = {
-  primary: '#1e3a8a',    // Deep Blue
-  secondary: '#9333ea',  // Vibrant Purple
-  tertiary: '#facc15',   // Bright Yellow
-  background: '#f1f5f9', // Light Slate
-  text: '#1f2937',       // Dark Gray
+  primary: `#1e3a8a`,    // Deep Blue
+  secondary: `#9333ea`,  // Vibrant Purple
+  tertiary: `#facc15`,   // Bright Yellow
+  background: `#f1f5f9`, // Light Slate
+  text: `#1f2937`,       // Dark Gray
 };
-
 export default function Collage() {
   const handleDownload = async (url: string) => {
     try {
@@ -133,7 +133,7 @@ export default function Collage() {
                   className="image-card"
                   onClick={() => handleDownload(src)}
                 >
-                  <img src={src} alt={`GIF ${index + 1}`} loading="lazy" />
+                  <Image src={src} alt={`GIF ${index + 1}`} loading="lazy" />
                   <div className="overlay" />
                 </motion.div>
               ))
