@@ -133,7 +133,7 @@ export default function Collage() {
                   className="image-card"
                   onClick={() => handleDownload(src)}
                 >
-                  <Image src={src} alt={`GIF ${index + 1}`} loading="lazy" />
+                  <Image src={src} alt={`GIF ${index + 1}`} loading="lazy" width={400} height={256} />
                   <div className="overlay" />
                 </motion.div>
               ))
